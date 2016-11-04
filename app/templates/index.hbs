@@ -1,0 +1,14 @@
+<h1> Welcome to Ask and Expert </h1>
+
+We hope you find exactly what you're looking for in a place to stay.
+
+<h3>Available Questions</h3>
+
+<ul>
+  {{#each model.questions as |question|}}
+     {{question-tile question=question}}
+  {{/each}}
+</ul>
+
+<!-- {{new-question saveQuestion2="saveQuestion3"}}
+ -->
