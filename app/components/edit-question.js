@@ -1,21 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewQuestion: false,
+  updateQuestionForm: false,
   actions: {
-    questionFormShow() {
-      this.set('addNewQuestion', true);
+    updateQuestionForm() {
+      this.set('updateQuestionForm', true);
     },
-
-    saveQuestion1() {
+    update(rental) {
       var params = {
         content: this.get('content'),
         author: this.get('author'),
         notes: this.get('notes')
       };
-      this.set('addNewQuestion', false);
-      this.sendAction('saveQuestion2', params);
+      this.set('updateQuestionForm', false);
+      this.sendAction('updateFromGrandchild', rental, params);
     }
   }
-
 });
