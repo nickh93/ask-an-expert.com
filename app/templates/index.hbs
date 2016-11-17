@@ -1,12 +1,12 @@
 <h1> Welcome to Ask and Expert </h1>
 
-We hope you find exactly what you're looking for in a place to stay.
+get your questios answered by an internet certified expert!
 
 <h3>Available Questions</h3>
 
 <ul>
   {{#each model.questions as |question|}}
-     {{question-tile question=question}}
+     {{question-tile question=question}} {{question-popularity question}}
   {{/each}}
 </ul>
 

@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   answerCount: Ember.computed('question.answers', function() {
     var countOfAnswers = this.get('question.answers').get('length');
     if (countOfAnswers === 0) {
-      return ' nobody has answered this yet';
+      return ' no answers have been submitted yet';
     }
     else {
       return 'this answer has been answered ' + countOfAnswers + ' times';
